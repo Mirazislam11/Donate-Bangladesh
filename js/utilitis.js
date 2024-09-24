@@ -14,3 +14,11 @@ function yourBalanceSub(balance1, balance2){
     const newBalance = balance1 - balance2;
     return newBalance;
 }
+
+// function validInput(id){
+//     const inputValue = document.getElementById(id).value;
+//     if(isNaN(inputValue) || inputValue < 0){
+//         alert('filed to donation');
+//         return;
+//     }
+// }
