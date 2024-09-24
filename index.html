@@ -10,16 +10,16 @@
 </head>
 
 <body>
-    <header class="sticky top-0 backdrop-blur-2xl">
-        <nav class="flex justify-around py-9 bg-[#F9F7F3] ">
-            <button class="bg-[#B4F461] text-[#111111] text-xl font-semibold py-3 px-8 rounded-lg">Blog</button>
-            <div class="flex items-center gap-4">
-                <img src="assets/logo.png" alt="">
-                <h3 class="text-[#111111] text-2xl font-semibold">Donate Bangladesh</h3>
+    <header class="lg:sticky top-0 backdrop-blur-md opacity-80">
+        <nav class="flex justify-around py-9 bg-[#F9F7F3]">
+            <button id="blog" class="bg-[#B4F461] text-[#111111] text-xl font-semibold py-3 px-8 rounded-lg max-sm:hidden">Blog</button>
+            <div class="flex items-center lg:gap-4 gap-1">
+                <img src="assets/logo.png" alt="" class="max-sm:w-8">
+                <h3 class="text-[#111111] lg:text-2xl font-semibold">Donate Bangladesh</h3>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center lg:gap-4 gap-1">
                 <img src="assets/coin.png" alt="">
-                <h4 class="text-[#111111] text-xl font-medium"><span id="your-balance">5500</span> BDT</h4>
+                <h4 class="text-[#111111] lg:text-xl font-medium"><span id="your-balance">5500</span> BDT</h4>
             </div>
         </nav>
         <div class="flex justify-center mt-20 gap-4">
@@ -28,9 +28,9 @@
         </div>
     </header>
     <main class="container mx-auto mt-16 ">
-        <div id="donation-container" class="space-y-8">
+        <div id="donation-container" class="space-y-8 mb-12 max-sm:px-3">
             <!-- Donate for Flood at Noakhali part -->
-            <div class="flex gap-8 border p-8 rounded-lg items-center">
+            <div class="lg:flex max-sm:space-y-4 gap-8 border p-8 rounded-lg items-center">
                 <img src="assets/noakhali.png" alt="">
                 <div class="space-y-5">
                     <div class="flex items-center gap-2 bg-slate-300 w-24 h-12 rounded-xl">
@@ -49,11 +49,27 @@
                         class="input input-bordered w-full" required /> <br>
                     <button id="btn-add-donation"
                         class="w-full bg-[#B4F461] py-4 rounded-xl text-[#111111] text-xl font-semibold">Donation</button>
+                     <!-- PopUp  Massage Successfull-->
+                     <dialog id="my_modal_4" class="modal">
+                        <div class="modal-box w-11/12 max-w-md flex flex-col items-center">
+                            <h3 class="text-4xl py-3 font-bold">Congrates!</h3>
+                            <div class="w-7">
+                                <img class="w-full" src="assets/coin.png" alt="">
+                            </div>
+                            <p class="py-4">You Have Donated for Humankind</p>
+                            <h3 class="text-2xl pb-3 font-bold">Successfully</h3>
+                            <div class="flex justify-center">
+                                <form method="dialog">
+                                    <button class="btn">Close</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
                 </div>
             </div>
 
             <!-- Donate for Flood Relief in Feni Part -->
-            <div class="flex gap-8 border p-8 rounded-lg items-center">
+            <div class="lg:flex max-sm:space-y-4 gap-8 border p-8 rounded-lg items-center">
                 <img src="assets/feni.png" alt="">
                 <div class="space-y-5">
                     <div class="flex items-center gap-2 bg-slate-300 w-24 h-12 rounded-xl">
@@ -75,7 +91,7 @@
             </div>
 
             <!-- Aid for Injured in the Quota Movement part -->
-            <div class="flex gap-8 border p-8 rounded-lg items-center">
+            <div class="lg:flex max-sm:space-y-4 gap-8 border p-8 rounded-lg items-center">
                 <img src="assets/quota-protest.png" alt="">
                 <div class="space-y-5">
                     <div class="flex items-center gap-2 bg-slate-300 w-24 h-12 rounded-xl">
@@ -96,13 +112,19 @@
                 </div>
             </div>
         </div>
-        <div id="transaction-container">
+        <div id="transaction-container" class="hidden">
+            <div id="transaction-content" class="">
 
+            </div>
+            <div class="mt-14 bg-[#F9F7F3] w-full h-20">
+
+            </div>
         </div>
     </main>
 
     <script src="js/utilitis.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/features.js"></script>
 </body>
 
 </html>

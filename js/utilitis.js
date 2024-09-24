@@ -15,10 +15,28 @@ function yourBalanceSub(balance1, balance2){
     return newBalance;
 }
 
-// function validInput(id){
-//     const inputValue = document.getElementById(id).value;
-//     if(isNaN(inputValue) || inputValue < 0){
-//         alert('filed to donation');
-//         return;
-//     }
-// }
+function showSectionById(id){
+    document.getElementById('donation-container').classList.add('hidden');
+    document.getElementById('transaction-container').classList.add('hidden');
+
+    document.getElementById(id).classList.remove('hidden')
+}
+
+function btnBackground(id){
+    document.getElementById('donation-btn').classList.add('bg-green-500')
+    document.getElementById('transaction-btn').classList.add('bg-green-500')
+
+    document.getElementById(id).classList.remove('bg-green-500')
+}
+// document.getElementById('donation-btn').addEventListener('click', function(){
+//     btnBackground('transaction-btn')
+// })
+// document.getElementById('transaction-btn').addEventListener('click', function(){
+//     btnBackground('donation-btn')
+// })
+
+document.getElementById('blog').addEventListener('click', function () {
+    window.location.href = 'blog.html';
+});
+document.getElementById('home').addEventListener('click', function () {
+    window.location.href = 'index.html';});
