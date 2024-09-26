@@ -23,10 +23,10 @@ function showSectionById(id){
 }
 
 function btnBackground(id){
-    document.getElementById('donation-btn').classList.add('bg-green-500')
-    document.getElementById('transaction-btn').classList.add('bg-green-500')
+    document.getElementById('donation-btn').classList.add('bg-[#B4F461]')
+    document.getElementById('transaction-btn').classList.add('bg-[#B4F461]')
 
-    document.getElementById(id).classList.remove('bg-green-500')
+    document.getElementById(id).classList.remove('bg-[#B4F461]')
 }
 // document.getElementById('donation-btn').addEventListener('click', function(){
 //     btnBackground('transaction-btn')
@@ -38,5 +38,3 @@ function btnBackground(id){
 document.getElementById('blog').addEventListener('click', function () {
     window.location.href = 'blog.html';
 });
-document.getElementById('home').addEventListener('click', function () {
-    window.location.href = 'index.html';});

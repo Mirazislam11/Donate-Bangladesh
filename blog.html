@@ -11,7 +11,7 @@
     <header>
         <nav class="flex justify-around py-9 bg-[#F9F7F3]">
             <button class="bg-[#B4F461] hidden text-[#111111] text-xl font-semibold py-3 px-8 rounded-lg max-sm:hidden">Blog</button>
-            <button class="bg-[#B4F461] text-[#111111] text-xl font-semibold py-3 px-8 rounded-lg max-sm:hidden">Home</button>
+            <button id="home" class="bg-[#B4F461] text-[#111111] text-xl font-semibold py-3 px-8 rounded-lg max-sm:hidden">Home</button>
 
             <div class="flex items-center lg:gap-4 gap-1">
                 <img src="assets/logo.png" alt="" class="max-sm:w-8">
@@ -72,5 +72,10 @@
             </div>
           </div>
     </main>
+    <script>
+      document.getElementById('home').addEventListener('click', function () {
+        window.location.href = 'index.html';
+      });
+    </script>
 </body>
 </html>
